@@ -1,22 +1,14 @@
+resource "aws_s3_bucket" "log_bucket" {
+  bucket = "projectqkdk_log-bucket"
+  acl    = "log-delivery-write"
+}
+
 resource "aws_s3_bucket" "bucket" {
   bucket = "projectqkdk"
   acl    = "private"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "test"
+  logging {
+    target_bucket = "${aws_s3_bucket.log_bucket.id}"
+    target_prefix = "log/"
   }
 }
-{
-  "Version":"2012-10-17",
-  "Statement":[
-    {
-      "Sid":"PublicRead",
-      "Effect":"Allow",
-      "Principal": "*",
-      "Action":["s3:GetObject"],
-      "Resource":["arn:aws:s3:::projectqkdk"]
-    }
-  ]
-}
-
