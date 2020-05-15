@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "log_bucket" {
-  bucket = "projectqkdk_log-bucket"
+  bucket = "projectqkdk_log_bucket"
   acl    = "log-delivery-write"
 }
 
