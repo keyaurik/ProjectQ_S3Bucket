@@ -1,6 +1,6 @@
 {
-    "name": "Windows 2016 EC2 on AWS - ProjectQ",
-    "description": "AWS Windows example",
+    "name": "S3 Bucket on AWS",
+    "description": "This template creates an S3 bucket on AWS",
     "version": "1.0",
     "imageUrl": "./assets/svg/IBM_WebSphere_Standalone.svg",
     "image": "tp_WAS_standalone.png",
@@ -19,29 +19,21 @@
         "githubRepoUrl": "",
         "githubAccessToken": "",
         "relativePathToTemplateFolder": "AWS/terraform/singlefile/hcl",
-        "templateFileName": "scenario1.tf"
+        "templateFileName": "s3bucketonAWS.tf"
       }
     },
     "metadata": {
-      "displayName": "Amazon EC2 Virtual Server with SSH Key - HCL",
+      "displayName": "S3 Bucket on AWS",
       "providerDisplayName": "IBM",
-      "longDescription": "Use this cloud resource template to quickly provision a Ubuntu 14.04 64 bit virtual server with ssh key into an existing Virtual Private Cloud (VPC) and on an existing network.",
+      "longDescription": "Create an S3 bucket on AWS",
       "bullets": [
        {
          "title": "Clouds",
          "description": "Amazon Web Services (AWS)"
        },
        {
-         "title": "Operating systems supported",
-         "description": "AWS: Ubuntu 14.04 LTS"
-       },
-       {
          "title": "Topology",
-         "description": "AWS: 1 virtual machine"
-       },
-       {
-         "title": "Default virtual machine settings",
-         "description": "<ul><li>AWS:<ul style=\"margin-left: 20px;\"><li>Flavor: t2.micro, Cores = 1, Memory = 1GB</li><li>Network: Private IP - Computed, Public IP - Computed</li></ul></li></ul>"
+         "description": "AWS: 1 S3 instance"
        },
        {
          "title": "Usage and special notes",
