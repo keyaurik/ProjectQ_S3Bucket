@@ -1,13 +1,12 @@
-resource "aws_s3_bucket" "b" {
-  bucket = "projectqkdk"
+resource "aws_s3_bucket" "bucket" {
+  bucket = "test_projectq"
   acl    = "private"
 
   tags = {
     Name        = "My bucket"
-    Environment = "Dev"
+    Environment = "test"
   }
 }
-{
   "Version":"2012-10-17",
   "Statement":[
     {
@@ -18,4 +17,3 @@ resource "aws_s3_bucket" "b" {
       "Resource":["arn:aws:s3:::examplebucket/*"]
     }
   ]
-}
