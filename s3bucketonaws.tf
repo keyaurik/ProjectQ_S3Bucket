@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "bucket" {
-  bucket = "test_projectq"
+resource "aws_s3_bucket" "b" {
+  bucket = "projectq"
   acl    = "private"
 
   tags = {
